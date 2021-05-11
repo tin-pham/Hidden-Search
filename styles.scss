@@ -1,0 +1,42 @@
+$transition: all 300ms ease-in-out;
+
+body {
+  background: #7b2cbf;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-container {
+  width: 400px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: $transition;
+  input {
+    width: 100%;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    padding: 0.5em 1em;
+  }
+
+  i {
+    font-size: 1.5rem;
+    background: inherit;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+  }
+}
+
+.input-container.active {
+  width: 50px;
+  transition: $transition;
+  input {
+    width: 0;
+  }
+}
